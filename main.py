@@ -4,7 +4,6 @@ def main():
     print(f"--- Begin report of {book_path} ---")
 
     text = get_book_text(book_path)
-    #print(text)
    
     word_count = get_word_count(text)
     print (f"{word_count} words found in the document")
@@ -17,8 +16,6 @@ def main():
     
     for item in listed_char_dict:
         print(f"The '{item['char']}' character was found {item['num']} times")
-
-    #print(listed_char_dict)
 
     print("--- End report --- ")
 
@@ -47,7 +44,6 @@ def get_listed(char_dict):
     listed_dicts = []
     for key in char_dict:
         one_char_dict = { 'char' : key, 'num' : char_dict[key] }
-        #print(one_char_dict)
         listed_dicts.append(one_char_dict)
     return listed_dicts
 
