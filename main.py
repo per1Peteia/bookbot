@@ -15,7 +15,10 @@ def main():
     
     listed_char_dict.sort(reverse=True, key=sort_on)
     
-    print(listed_char_dict)
+    for item in listed_char_dict:
+        print(f"The '{item['char']}' character was found {item['num']} times")
+
+    #print(listed_char_dict)
 
     print("--- End report --- ")
 
@@ -43,13 +46,13 @@ def get_char_count(text):
 def get_listed(char_dict):
     listed_dicts = []
     for key in char_dict:
-        one_char_dict = { "char" : key, "num" : char_dict[key] }
+        one_char_dict = { 'char' : key, 'num' : char_dict[key] }
         #print(one_char_dict)
         listed_dicts.append(one_char_dict)
     return listed_dicts
 
 def sort_on(dict):
-    return dict["num"]
+    return dict['num']
 
 
 main()
